@@ -4,20 +4,25 @@ public class RomanoToDecimal {
 	public int romanoDecimal(String roman){
 		int suma = 0;
 		for(int i = 0; i<roman.length();i++){
-			if(roman.charAt(i) == 'I'){
-				suma+=1;
+			if(i > 0 && charToRoman(roman.charAt(i-1)) < charToRoman(roman.charAt(i))){
+				suma-=2*charToRoman(roman.charAt(i-1));
 			}
-			if(roman.charAt(i) == 'V'){
-				if(i > 0 && roman.charAt(i-1) == 'I'){
-					suma-=2;
-					suma+=5;
-				}else{
-					suma+=5;
-				}
+			suma+=charToRoman(roman.charAt(i));				
 				
-			}
 		}
 		return suma;
+	}
+	
+	public int charToRoman(char a){
+		if(a == 'I'){
+			return 1;
+		}else if(a == 'V'){
+			return 5;
+		}else if(a == 'X'){
+			return 10;
+		}
+		
+		return -1;
 	}
 	
 }
