@@ -20,6 +20,14 @@ public class RomanoToDecimal {
 			return 5;
 		}else if(a == 'X'){
 			return 10;
+		}else if(a == 'L'){
+			return 50;
+		}else if(a == 'C'){
+			return 100;
+		}else if(a == 'D'){
+			return 500;
+		}else if(a == 'M'){
+			return 1000;
 		}
 		
 		return -1;

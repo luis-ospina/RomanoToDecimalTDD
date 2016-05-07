@@ -74,5 +74,71 @@ public class RomanoToDecimalTest extends TestCase {
 		assertEquals(39,decimal);
 	}
 	
+	@Test
+	public void test50() {
+		int decimal = test.romanoDecimal("L");
+		assertEquals(50,decimal);
+	}
+	
+	@Test
+	public void test98() {
+		int decimal = test.romanoDecimal("XCVIII");
+		assertEquals(98,decimal);
+	}
+	
+	@Test
+	public void test100() {
+		int decimal = test.romanoDecimal("C");
+		assertEquals(100,decimal);
+	}
+	
+	@Test
+	public void test120() {
+		int decimal = test.romanoDecimal("CXX");
+		assertEquals(120,decimal);
+	}
+	
+	@Test
+	public void test344() {
+		int decimal = test.romanoDecimal("CCCXLIV");
+		assertEquals(344,decimal);
+	}
+	
+	@Test
+	public void test434() {
+		int decimal = test.romanoDecimal("CDXXXIV");
+		assertEquals(434,decimal);
+	}
+	
+	@Test
+	public void test500() {
+		int decimal = test.romanoDecimal("D");
+		assertEquals(500,decimal);
+	}
+	
+	@Test
+	public void test753() {
+		int decimal = test.romanoDecimal("DCCLIII");
+		assertEquals(753,decimal);
+	}
+	
+	@Test
+	public void test869() {
+		int decimal = test.romanoDecimal("DCCCLXIX");
+		assertEquals(869,decimal);
+	}
+	
+	@Test
+	public void test999() {
+		int decimal = test.romanoDecimal("CMXCIX");
+		assertEquals(999,decimal);
+	}
+	
+	@Test
+	public void test1000() {
+		int decimal = test.romanoDecimal("M");
+		assertEquals(1000,decimal);
+	}
+	
 	
 }
