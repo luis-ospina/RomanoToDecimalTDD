@@ -19,4 +19,10 @@ public class RomanoToDecimalTest extends TestCase {
 		int decimal = test.romanoDecimal("II");
 		assertEquals(2,decimal);
 	}
+	
+	@Test
+	public void test3() {
+		int decimal = test.romanoDecimal("III");
+		assertEquals(3,decimal);
+	}
 }
