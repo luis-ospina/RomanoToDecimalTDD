@@ -7,6 +7,15 @@ public class RomanoToDecimal {
 			if(roman.charAt(i) == 'I'){
 				suma+=1;
 			}
+			if(roman.charAt(i) == 'V'){
+				if(i > 0 && roman.charAt(i-1) == 'I'){
+					suma-=2;
+					suma+=5;
+				}else{
+					suma+=5;
+				}
+				
+			}
 		}
 		return suma;
 	}

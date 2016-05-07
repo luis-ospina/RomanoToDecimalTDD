@@ -25,4 +25,22 @@ public class RomanoToDecimalTest extends TestCase {
 		int decimal = test.romanoDecimal("III");
 		assertEquals(3,decimal);
 	}
+	
+	@Test
+	public void test4() {
+		int decimal = test.romanoDecimal("IV");
+		assertEquals(4,decimal);
+	}
+	
+	@Test
+	public void test5() {
+		int decimal = test.romanoDecimal("V");
+		assertEquals(5,decimal);
+	}
+	
+	@Test
+	public void test8() {
+		int decimal = test.romanoDecimal("VIII");
+		assertEquals(8,decimal);
+	}
 }
